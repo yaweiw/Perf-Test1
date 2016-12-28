@@ -1,5 +1,5 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!doctype html>
+<html>
 <head>
 <meta http-equiv="content-type" content="text/html" charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
@@ -24,7 +24,6 @@ body, html {
 	max-height: 100%;
 }
 html{font-size:62.5%;}
-
 .main{
 	width:100%;
 	min-height:100%;
@@ -35,7 +34,7 @@ html{font-size:62.5%;}
 	-webkit-box-orient:vertical;
 }
 .header {
-	background: #f56c6c;
+	background: #0078d7;
 	height:48px;
 	line-height:48px;
 	overflow: hidden;
@@ -64,23 +63,23 @@ html{font-size:62.5%;}
 	left: 0px;
 	top: 0px;
 }
-.wifi-fail .content{
-	-webkit-box-flex: 1;    
-	-moz-box-flex: 1;        
-	-webkit-flex: 1;       
-	-ms-flex: 1;            
-	flex: 1; 
+.wifi-success .content{
+	-webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
 	padding:10px;
 	background-color:#FFF;
 }
-.wifi-fail h2{
-	color: #f56c6c;
+.wifi-success h2{
+	color: #0078d7;
 	font-size:30px;
 	text-align:center;
 	padding:30px 0;
 	line-height:30px;
 }
-.wifi-fail {
+.wifi-success p{
 	text-indent:2rem;
 	font-size:16px;
 	line-height:28px;
@@ -103,7 +102,7 @@ html{font-size:62.5%;}
 	padding:0 10px;
 }
 .btn-red{
-	background-color:#f56c6c;
+	background-color:#0078d7;
 }
 .geteway-btn button {
     width: 100%;
@@ -113,16 +112,14 @@ html{font-size:62.5%;}
 </head>
 
 <body>
-<div class="main wifi-fail">
+<div class="main wifi-success">
   <header class="header">
         <a href="#" class="btn-return">UP</a>
         <h3>WiFi Setting</h3>
     </header>
     <div class="content">
-       <h2>Setting fail!</h2>
-       <section class="geteway-btn"><a href="/setting.htm" class="btn btn-red btn-try">RETRY</a></section>
+       <h2>Setting success!</h2>
     </div>
 </div>
-
 </body>
 </html>
