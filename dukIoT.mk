@@ -24,7 +24,7 @@
 
 NAME := App_Helloworld
 
-$(NAME)_SOURCES := main.c duktape.c \
+$(NAME)_SOURCES := main.c /duktapert/duktape.c \
   app_httpd.c \
   web_data.c
 
