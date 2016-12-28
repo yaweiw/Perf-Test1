@@ -32,6 +32,7 @@
 
 #include "mico.h"
 #include "duktape.h"
+#include "app_httpd.h"
 
 #define os_helloworld_log(format, ...)  custom_log("helloworld", format, ##__VA_ARGS__)
 
@@ -71,7 +72,13 @@ int application_start( void )
   config_mico_wifi(mico_context, "MSFTLAB", "");
 
   mico_system_init(mico_context);
-  
+
+/* Comment out web-based config for WIFI due to resource limitation
+  // start http server thread
+  app_httpd_start();
+  mico_rtos_delete_thread( NULL );
+*/
+
   /* Output on debug serial port */
   os_helloworld_log( "Hello world! XXXX" );
 
@@ -84,7 +91,7 @@ int application_start( void )
   os_helloworld_log( "EVAL STRING CALLED" );
   duk_destroy_heap(ctx);
   os_helloworld_log( "HEAP DESTROYED");
-  system_log("C -- Free memory %d bytes", MicoGetMemoryInfo()->free_memory); 
+  system_log("C -- Free memory %d bytes", MicoGetMemoryInfo()->free_memory);
 
   /* Trigger MiCO system led available on most MiCOKit */
   while(1)

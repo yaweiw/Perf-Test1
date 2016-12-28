@@ -24,4 +24,8 @@
 
 NAME := App_Helloworld
 
-$(NAME)_SOURCES := main.c duktape.c
+$(NAME)_SOURCES := main.c duktape.c \
+  app_httpd.c \
+  web_data.c
+
+$(NAME)_COMPONENTS += daemons/http_server
