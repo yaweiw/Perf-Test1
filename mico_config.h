@@ -83,3 +83,6 @@
 //#define MICO_CONFIG_SERVER_ENABLE 
 #define MICO_CONFIG_SERVER_PORT    8000
 
+/************************************************************************
+ * Custom WIFI SSID. Length should be no more than 24.*/
+#define CUSTOM_WIFI_SSID  "DevDivKit"
