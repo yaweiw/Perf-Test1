@@ -25,10 +25,13 @@
 NAME := App_Helloworld
 
 $(NAME)_SOURCES := main.c /duktapert/duktape.c \
-  /wifi_config/app_httpd.c \
-  /wifi_config/wifi_config.c \
-  /wifi_config/helper.c \
-  /wifi_config/web_data.c
+  /wifi_config/app_httpd.c              \
+  /wifi_config/wifi_config.c            \
+  /wifi_config/helper.c                 \
+  /wifi_config/web_data.c               \
+  /sensor_libs/DHT11/dht11_operation.c  \
+  /sensor_libs/DHT11/dht11_binding.c    \
+  /sensor_libs/LED/led_binding.c
 
 $(NAME)_COMPONENTS += daemons/http_server \
   filesystem.FatFs.src \
